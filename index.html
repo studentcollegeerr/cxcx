@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة تحديث</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        input {
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- مربع النص بـ id = myTextBox -->
+        <input type="text" id="myTextBox" placeholder="أدخل الرقم هنا">
+        <br>
+        
+        <!-- الزر بـ id = myButton -->
+        <button id="myButton" onclick="checkAndReload()">تحديث الصفحة</button>
+    </div>
+
+    <script>
+        function checkAndReload() {
+            // جلب القيمة من مربع النص باستخدام الـ id
+            var inputValue = document.getElementById("myTextBox").value;
+
+            // التحقق إذا كانت القيمة هي 000012
+            if (inputValue === "000012") {
+                // تحديث الصفحة
+                location.reload();
+            }
+            // إذا كان الرقم غير صحيح، لا يتم وضع أي كود هنا، وبالتالي لن يحدث شيء
+        }
+    </script>
+
+</body>
+</html>
